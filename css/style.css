@@ -1,0 +1,61 @@
+html,body {
+  font-family: 'Dosis', sans-serif;
+}
+body {
+  margin: 20px;
+}
+
+.header {
+  position: relative;
+}
+.header h4.heading {
+  font-size: 16px;
+  margin-top: 6px;
+  color: #686868;
+  display: inline-block;
+}
+
+.contact {
+  color: #868889;
+  float: right;
+  margin-top: 4px;
+}
+.contact .static,
+.contact .link-wrapper {
+  display: inline-block;
+}
+.contact .link-wrapper {
+  position: relative;
+}
+.contact .email-link {
+  color: #868889;
+  text-decoration: none;
+}
+.contact .email-link::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(134,136,137,0.2);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+.contact .email-link:hover::after,
+.contact .email-link:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.img-block img{
+  width: 100%;
+}
